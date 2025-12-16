@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -24,13 +25,13 @@ import {
 const FirebaseContext = createContext(null);
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD2FnsU9S4Zhtgj-91O2Lo5tjwaIG8c4AQ",
-  authDomain: "book-ef62e.firebaseapp.com",
-  projectId: "book-ef62e",
-  storageBucket: "book-ef62e.firebasestorage.app",
-  messagingSenderId: "1077426744391",
-  appId: "1:1077426744391:web:e8be0b4f71acb862861562",
-  measurementId: "G-MCL9NZ3LZB",
+  apiKey: process.env.FIREBASEAPIKEY,
+  authDomain: process.env.FIREBASEauthDomain,
+  projectId: process.env.FIREBASEprojectId,
+  storageBucket: process.env.FIREBASEstorageBucket,
+  messagingSenderId: process.env.FIREBASEmessagingSenderId,
+  appId: process.env.FIREBASEappId,
+  measurementId: process.env.FIREBASEmeasurementId,
 };
 
 const firbaseApp = initializeApp(firebaseConfig);
